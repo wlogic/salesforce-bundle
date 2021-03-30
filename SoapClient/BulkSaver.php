@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpforce\SalesforceBundle;
+namespace Phpforce\SalesforceBundle\SoapClient;
 
-use Phpforce\SalesforceBundle\Result\SaveResult;
+use Phpforce\SalesforceBundle\SoapClient\Result\SaveResult;
 
 /**
  * Add creates, updates and upserts to the queue, and issue them in bulk to

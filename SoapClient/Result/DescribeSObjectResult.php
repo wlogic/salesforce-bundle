@@ -1,9 +1,9 @@
 <?php
 
-namespace Phpforce\SalesforceBundle\Result;
+namespace Phpforce\SalesforceBundle\SoapClient\Result;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use Phpforce\SalesforceBundle\Result\DescribeSObjectResult\Field;
+use Phpforce\SalesforceBundle\SoapClient\Result\DescribeSObjectResult\Field;
 
 class DescribeSObjectResult
 {

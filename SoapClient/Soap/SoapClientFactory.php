@@ -1,7 +1,7 @@
 <?php
-namespace Phpforce\SalesforceBundle\Soap;
+namespace Phpforce\SalesforceBundle\SoapClient\Soap;
 
-use Phpforce\SalesforceBundle\Soap\TypeConverter;
+use Phpforce\SalesforceBundle\SoapClient\Soap\TypeConverter;
 
 /**
  * Factory to create a \SoapClient properly configured for the Salesforce SOAP
@@ -15,33 +15,33 @@ class SoapClientFactory
      * @var array
      */
     protected $classmap = array(
-        'ChildRelationship'     => 'Phpforce\SalesforceBundle\Result\ChildRelationship',
-        'DeleteResult'          => 'Phpforce\SalesforceBundle\Result\DeleteResult',
-        'DeletedRecord'         => 'Phpforce\SalesforceBundle\Result\DeletedRecord',
-        'DescribeGlobalResult'  => 'Phpforce\SalesforceBundle\Result\DescribeGlobalResult',
-        'DescribeGlobalSObjectResult' => 'Phpforce\SalesforceBundle\Result\DescribeGlobalSObjectResult',
-        'DescribeSObjectResult' => 'Phpforce\SalesforceBundle\Result\DescribeSObjectResult',
-        'DescribeTab'           => 'Phpforce\SalesforceBundle\Result\DescribeTab',
-        'EmptyRecycleBinResult' => 'Phpforce\SalesforceBundle\Result\EmptyRecycleBinResult',
-        'Error'                 => 'Phpforce\SalesforceBundle\Result\Error',
-        'Field'                 => 'Phpforce\SalesforceBundle\Result\DescribeSObjectResult\Field',
-        'GetDeletedResult'      => 'Phpforce\SalesforceBundle\Result\GetDeletedResult',
-        'GetServerTimestampResult' => 'Phpforce\SalesforceBundle\Result\GetServerTimestampResult',
-        'GetUpdatedResult'      => 'Phpforce\SalesforceBundle\Result\GetUpdatedResult',
-        'GetUserInfoResult'     => 'Phpforce\SalesforceBundle\Result\GetUserInfoResult',
-        'LeadConvert'           => 'Phpforce\SalesforceBundle\Request\LeadConvert',
-        'LeadConvertResult'     => 'Phpforce\SalesforceBundle\Result\LeadConvertResult',
-        'LoginResult'           => 'Phpforce\SalesforceBundle\Result\LoginResult',
-        'MergeResult'           => 'Phpforce\SalesforceBundle\Result\MergeResult',
-        'QueryResult'           => 'Phpforce\SalesforceBundle\Result\QueryResult',
-        'SaveResult'            => 'Phpforce\SalesforceBundle\Result\SaveResult',
-        'SearchResult'          => 'Phpforce\SalesforceBundle\Result\SearchResult',
-        'SendEmailError'        => 'Phpforce\SalesforceBundle\Result\SendEmailError',
-        'SendEmailResult'       => 'Phpforce\SalesforceBundle\Result\SendEmailResult',
-        'SingleEmailMessage'    => 'Phpforce\SalesforceBundle\Request\SingleEmailMessage',
-        'sObject'               => 'Phpforce\SalesforceBundle\Result\SObject',
-        'UndeleteResult'        => 'Phpforce\SalesforceBundle\Result\UndeleteResult',
-        'UpsertResult'          => 'Phpforce\SalesforceBundle\Result\UpsertResult',
+        'ChildRelationship'     => 'Phpforce\SalesforceBundle\SoapClient\Result\ChildRelationship',
+        'DeleteResult'          => 'Phpforce\SalesforceBundle\SoapClient\Result\DeleteResult',
+        'DeletedRecord'         => 'Phpforce\SalesforceBundle\SoapClient\Result\DeletedRecord',
+        'DescribeGlobalResult'  => 'Phpforce\SalesforceBundle\SoapClient\Result\DescribeGlobalResult',
+        'DescribeGlobalSObjectResult' => 'Phpforce\SalesforceBundle\SoapClient\Result\DescribeGlobalSObjectResult',
+        'DescribeSObjectResult' => 'Phpforce\SalesforceBundle\SoapClient\Result\DescribeSObjectResult',
+        'DescribeTab'           => 'Phpforce\SalesforceBundle\SoapClient\Result\DescribeTab',
+        'EmptyRecycleBinResult' => 'Phpforce\SalesforceBundle\SoapClient\Result\EmptyRecycleBinResult',
+        'Error'                 => 'Phpforce\SalesforceBundle\SoapClient\Result\Error',
+        'Field'                 => 'Phpforce\SalesforceBundle\SoapClient\Result\DescribeSObjectResult\Field',
+        'GetDeletedResult'      => 'Phpforce\SalesforceBundle\SoapClient\Result\GetDeletedResult',
+        'GetServerTimestampResult' => 'Phpforce\SalesforceBundle\SoapClient\Result\GetServerTimestampResult',
+        'GetUpdatedResult'      => 'Phpforce\SalesforceBundle\SoapClient\Result\GetUpdatedResult',
+        'GetUserInfoResult'     => 'Phpforce\SalesforceBundle\SoapClient\Result\GetUserInfoResult',
+        'LeadConvert'           => 'Phpforce\SalesforceBundle\SoapClient\Request\LeadConvert',
+        'LeadConvertResult'     => 'Phpforce\SalesforceBundle\SoapClient\Result\LeadConvertResult',
+        'LoginResult'           => 'Phpforce\SalesforceBundle\SoapClient\Result\LoginResult',
+        'MergeResult'           => 'Phpforce\SalesforceBundle\SoapClient\Result\MergeResult',
+        'QueryResult'           => 'Phpforce\SalesforceBundle\SoapClient\Result\QueryResult',
+        'SaveResult'            => 'Phpforce\SalesforceBundle\SoapClient\Result\SaveResult',
+        'SearchResult'          => 'Phpforce\SalesforceBundle\SoapClient\Result\SearchResult',
+        'SendEmailError'        => 'Phpforce\SalesforceBundle\SoapClient\Result\SendEmailError',
+        'SendEmailResult'       => 'Phpforce\SalesforceBundle\SoapClient\Result\SendEmailResult',
+        'SingleEmailMessage'    => 'Phpforce\SalesforceBundle\SoapClient\Request\SingleEmailMessage',
+        'sObject'               => 'Phpforce\SalesforceBundle\SoapClient\Result\SObject',
+        'UndeleteResult'        => 'Phpforce\SalesforceBundle\SoapClient\Result\UndeleteResult',
+        'UpsertResult'          => 'Phpforce\SalesforceBundle\SoapClient\Result\UpsertResult',
     );
 
     /**

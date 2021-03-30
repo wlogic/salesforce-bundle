@@ -1,11 +1,11 @@
 <?php
-namespace Phpforce\SalesforceBundle;
+namespace Phpforce\SalesforceBundle\SoapClient;
 
-use Phpforce\SalesforceBundle\Common\AbstractHasDispatcher;
-use Phpforce\SalesforceBundle\Soap\SoapClient;
-use Phpforce\SalesforceBundle\Result;
-use Phpforce\SalesforceBundle\Event;
-use Phpforce\SalesforceBundle\Exception;
+use Phpforce\SalesforceBundle\SoapClient\Common\AbstractHasDispatcher;
+use Phpforce\SalesforceBundle\SoapClient\Soap\SoapClient;
+use Phpforce\SalesforceBundle\SoapClient\Result;
+use Phpforce\SalesforceBundle\SoapClient\Event;
+use Phpforce\SalesforceBundle\SoapClient\Exception;
 
 /**
  * A client for the Salesforce SOAP API

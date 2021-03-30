@@ -1,6 +1,6 @@
 <?php
 
-namespace Phpforce\SalesforceBundle\Result\DescribeSObjectResult;
+namespace Phpforce\SalesforceBundle\SoapClient\Result\DescribeSObjectResult;
 
 class Field
 {

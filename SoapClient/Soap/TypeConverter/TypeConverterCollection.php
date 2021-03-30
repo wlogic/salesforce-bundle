@@ -1,6 +1,6 @@
 <?php
 
-namespace Phpforce\SalesforceBundle\Soap\TypeConverter;
+namespace Phpforce\SalesforceBundle\SoapClient\Soap\TypeConverter;
 
 use Doctrine\Common\Collections\ArrayCollection;
 

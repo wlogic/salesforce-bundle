@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpforce\SalesforceBundle;
+namespace Phpforce\SalesforceBundle\SoapClient;
 
-use Phpforce\SalesforceBundle\Response\SaveResult;
+use Phpforce\SalesforceBundle\SoapClient\Response\SaveResult;
 
 interface BulkSaverInterface
 {

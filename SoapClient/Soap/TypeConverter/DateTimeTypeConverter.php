@@ -1,5 +1,5 @@
 <?php
-namespace Phpforce\SalesforceBundle\Soap\TypeConverter;
+namespace Phpforce\SalesforceBundle\SoapClient\Soap\TypeConverter;
 
 /**
  * Converts between PHP \DateTime and SOAP dateTime objects
