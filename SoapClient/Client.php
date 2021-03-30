@@ -1,7 +1,7 @@
 <?php
 namespace Phpforce\SalesforceBundle\SoapClient;
 
-use Phpforce\SalesforceBundle\SoapClient\Common\AbstractHasDispatcher;
+use Phpforce\SalesforceBundle\Common\AbstractHasDispatcher;
 use Phpforce\SalesforceBundle\SoapClient\Soap\SoapClient;
 use Phpforce\SalesforceBundle\SoapClient\Result;
 use Phpforce\SalesforceBundle\SoapClient\Event;
