@@ -1,5 +1,5 @@
 <?php
-namespace Phpforce\SalesforceBundle\Event;
+namespace Phpforce\SalesforceBundle\SoapClient\Event;
 
 use Symfony\Component\EventDispatcher\Event;
 

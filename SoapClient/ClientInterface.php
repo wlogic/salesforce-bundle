@@ -1,7 +1,7 @@
 <?php
-namespace Phpforce\SalesforceBundle;
+namespace Phpforce\SalesforceBundle\SoapClient;
 
-use Phpforce\SalesforceBundle\Result;
+use Phpforce\SalesforceBundle\SoapClient\Result;
 
 /**
  * Salesforce API client interface

@@ -1,8 +1,8 @@
 <?php
-namespace Phpforce\SalesforceBundle;
+namespace Phpforce\SalesforceBundle\SoapClient;
 
-use Phpforce\SalesforceBundle\Soap\SoapClientFactory;
-use Phpforce\SalesforceBundle\Plugin\LogPlugin;
+use Phpforce\SalesforceBundle\SoapClient\Soap\SoapClientFactory;
+use Phpforce\SalesforceBundle\SoapClient\Plugin\LogPlugin;
 use Psr\Log\LoggerInterface;
 
 /**

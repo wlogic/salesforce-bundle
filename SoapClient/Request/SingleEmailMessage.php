@@ -1,5 +1,5 @@
 <?php
-namespace Phpforce\SalesforceBundle\Request;
+namespace Phpforce\SalesforceBundle\SoapClient\Request;
 
 class SingleEmailMessage extends BaseEmail
 {

@@ -1,5 +1,5 @@
 <?php
-namespace Phpforce\SalesforceBundle\Exception;
+namespace Phpforce\SalesforceBundle\SoapClient\Exception;
 
 /**
  * Collection of faulty results

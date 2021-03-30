@@ -1,8 +1,8 @@
 <?php
 
-namespace Phpforce\SalesforceBundle\EventListener;
+namespace Phpforce\SalesforceBundle\SoapClient\EventListener;
 
-use Phpforce\SalesforceBundle\Event;
+use Phpforce\SalesforceBundle\SoapClient\Event;
 use Symfony\Component\HttpKernel\Log\LoggerInterface;
 
 class LogTransactionListener

@@ -1,6 +1,6 @@
 <?php
 
-namespace Phpforce\SalesforceBundle\Result;
+namespace Phpforce\SalesforceBundle\SoapClient\Result;
 
 class SendEmailError extends Error
 {

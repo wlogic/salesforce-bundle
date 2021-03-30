@@ -1,5 +1,5 @@
 <?php
-namespace Phpforce\SalesforceBundle;
+namespace Phpforce\SalesforceBundle\SoapClient;
 
 final class Events
 {

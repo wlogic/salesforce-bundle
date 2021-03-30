@@ -1,7 +1,7 @@
 <?php
-namespace Phpforce\SalesforceBundle\Result;
+namespace Phpforce\SalesforceBundle\SoapClient\Result;
 
-use Phpforce\SalesforceBundle\Client;
+use Phpforce\SalesforceBundle\SoapClient\Client;
 
 /**
  * Iterator that contains records retrieved from the Salesforce API

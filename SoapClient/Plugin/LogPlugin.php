@@ -1,9 +1,9 @@
 <?php
-namespace Phpforce\SalesforceBundle\Plugin;
+namespace Phpforce\SalesforceBundle\SoapClient\Plugin;
 
-use Phpforce\SalesforceBundle\Event\RequestEvent;
-use Phpforce\SalesforceBundle\Event\ResponseEvent;
-use Phpforce\SalesforceBundle\Event\FaultEvent;
+use Phpforce\SalesforceBundle\SoapClient\Event\RequestEvent;
+use Phpforce\SalesforceBundle\SoapClient\Event\ResponseEvent;
+use Phpforce\SalesforceBundle\SoapClient\Event\FaultEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Psr\Log\LoggerInterface;
 

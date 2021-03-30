@@ -1,5 +1,5 @@
 <?php
-namespace Phpforce\SalesforceBundle\Exception;
+namespace Phpforce\SalesforceBundle\SoapClient\Exception;
 
 class DeleteException extends \RuntimeException
 {
