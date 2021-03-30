@@ -13,8 +13,7 @@
         }
     ],
     "require": {
-        "php": ">=5.3.0",
-        "phpforce/soap-client": "*"
+        "php": ">=5.3.0"
     },
     "suggest": {
         "guzzle/http": "For fetching the latest WSDL from Salesforce"

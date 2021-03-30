@@ -6,17 +6,17 @@
 
     <services>
 
-        <service id="phpforce.soap_client" class="Phpforce\SoapClient\Client">
+        <service id="phpforce.soap_client" class="Phpforce\SalesforceBundle\Client">
             <factory service="phpforce.soap_client.builder" method="build" />
         </service>
         
         <service id="phpforce.soap_client.bulk_saver"
-                 class="Phpforce\SoapClient\BulkSaver">
+                 class="Phpforce\SalesforceBundle\BulkSaver">
             <argument type="service" id="phpforce.soap_client" />
         </service>
 
         <service id="phpforce.soap_client.builder"
-                 class="Phpforce\SoapClient\ClientBuilder">
+                 class="Phpforce\SalesforceBundle\ClientBuilder">
             <argument>%phpforce.soap_client.wsdl%</argument>
             <argument>%phpforce.soap_client.username%</argument>
             <argument>%phpforce.soap_client.password%</argument>
