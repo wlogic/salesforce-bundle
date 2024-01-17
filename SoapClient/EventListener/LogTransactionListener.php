@@ -3,7 +3,7 @@
 namespace Phpforce\SalesforceBundle\SoapClient\EventListener;
 
 use Phpforce\SalesforceBundle\SoapClient\Event;
-use Symfony\Component\HttpKernel\Log\LoggerInterface;
+use Psr\Log\LoggerInterface;
 
 class LogTransactionListener
 {
@@ -35,13 +35,13 @@ class LogTransactionListener
 
     public function onSalesforceClientSoapFault(Event\SoapFaultEvent $event)
     {
-        $this->logger->err('[Salesforce] fault: ' . $event->getSoapFault()->getMessage());
+        $this->logger->error('[Salesforce] fault: ' . $event->getSoapFault()->getMessage());
     }
 
     public function onSalesforceClientError(Event\ErrorEvent $event)
     {
         $error = $event->getError();
-        $this->logger->err('[Salesforce] error: ' . $error->statusCode . ' - '
+        $this->logger->error('[Salesforce] error: ' . $error->statusCode . ' - '
                            . $error->message, get_object_vars($error));
     }
 

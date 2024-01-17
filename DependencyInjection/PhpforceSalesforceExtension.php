@@ -27,6 +27,8 @@ class PhpforceSalesforceExtension extends Extension
 
         $loader->load('soap_client.xml');
         $loader->load('rest_client.xml');
+        $loader->load('command.xml');
+
         foreach ($config['soap_client'] as $key => $value) {
             $container->setParameter('phpforce.soap_client.' . $key, $value);
         }

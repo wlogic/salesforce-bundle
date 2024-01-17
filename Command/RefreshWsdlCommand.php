@@ -1,7 +1,8 @@
 <?php
 namespace Phpforce\SalesforceBundle\Command;
 
-use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
+use Phpforce\SalesforceBundle\SoapClient\Client as SoapClient;
+use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -13,16 +14,30 @@ use Guzzle\Http\Client;
  *
  * @author David de Boer <david@ddeboer.nl>
  */
-class RefreshWsdlCommand extends ContainerAwareCommand
+class RefreshWsdlCommand extends Command
 {
+    protected static $defaultName = 'phpforce:refresh-wsdl';
+
+    protected static $defaultDescription = 'Refresh Salesforce WSDL';
+
+    private SoapClient $client;
+
+    private string $wsdlFile;
+
+    public function __construct(SoapClient $client, string $wsdlFile)
+    {
+        $this->client = $client;
+        $this->wsdlFile = $wsdlFile;
+
+        parent::__construct();
+    }
+
     /**
      * {@inheritdoc}
      */
     protected function configure()
     {
         $this
-            ->setName('phpforce:refresh-wsdl')
-            ->setDescription('Refresh Salesforce WSDL')
             ->setHelp(
                 'Refreshing the WSDL itself requires a WSDL, so when using this'
                 . 'command for the first time, please download the WSDL '
@@ -39,14 +54,12 @@ class RefreshWsdlCommand extends ContainerAwareCommand
     /**
      * {@inheritdoc}
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $output->writeln('Updating the WSDL file');
 
-        $client = $this->getContainer()->get('phpforce.soap_client');
-
         // Get current session id
-        $loginResult = $client->getLoginResult();
+        $loginResult = $this->client->getLoginResult();
         $sessionId = $loginResult->getSessionId();
         $instance = $loginResult->getServerInstance();
 
@@ -65,11 +78,9 @@ class RefreshWsdlCommand extends ContainerAwareCommand
         $response = $request->send();
 
         $wsdl = $response->getBody();
-        $wsdlFile = $this->getContainer()
-            ->getParameter('phpforce.soap_client.wsdl');
 
         // Write WSDL
-        file_put_contents($wsdlFile, $wsdl);
+        file_put_contents($this->wsdlFile, $wsdl);
 
         // Run clear cache command
         if (!$input->getOption('no-cache-clear')) {
@@ -81,6 +92,8 @@ class RefreshWsdlCommand extends ContainerAwareCommand
             $input = new ArrayInput($arguments);
             $command->run($input, $output);
         }
+
+        return Command::SUCCESS;
     }
 }
 
