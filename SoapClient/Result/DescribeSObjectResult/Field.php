@@ -2,6 +2,9 @@
 
 namespace Phpforce\SalesforceBundle\SoapClient\Result\DescribeSObjectResult;
 
+use AllowDynamicProperties;
+
+#[AllowDynamicProperties]
 class Field
 {
     protected $autoNumber;

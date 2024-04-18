@@ -2,6 +2,9 @@
 
 namespace Phpforce\SalesforceBundle\SoapClient\Result;
 
+use AllowDynamicProperties;
+
+#[AllowDynamicProperties]
 class ChildRelationship
 {
     protected $cascadeDelete;

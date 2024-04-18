@@ -2,9 +2,11 @@
 
 namespace Phpforce\SalesforceBundle\SoapClient\Result;
 
+use AllowDynamicProperties;
 use Doctrine\Common\Collections\ArrayCollection;
 use Phpforce\SalesforceBundle\SoapClient\Result\DescribeSObjectResult\Field;
 
+#[AllowDynamicProperties]
 class DescribeSObjectResult
 {
     protected $activateable;

@@ -2,9 +2,12 @@
 
 namespace Phpforce\SalesforceBundle\SoapClient\Result;
 
+use AllowDynamicProperties;
+
 /**
  * User info result
  */
+#[AllowDynamicProperties]
 class GetUserInfoResult
 {
     protected $accessibilityMode;

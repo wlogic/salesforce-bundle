@@ -2,10 +2,13 @@
 
 namespace Phpforce\SalesforceBundle\SoapClient\Result;
 
+use AllowDynamicProperties;
+
 /**
  * Standard object
  *
  */
+#[AllowDynamicProperties]
 class SObject
 {
     /**
